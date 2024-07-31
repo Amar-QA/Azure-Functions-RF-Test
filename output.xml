@@ -1,239 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240731 13:44:26.807" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240731 15:18:17.620" rpa="false" schemaversion="4">
 <suite id="s1" name="CreateNewProject" source="c:\Users\v-amarnathms\Desktop\Azure-Functions-RF-Test\CreateNewProject.robot">
-<test id="s1-t1" name="Open VS Code" line="14">
+<test id="s1-t1" name="Open VS Code and Create Azure Function Project" line="12">
 <kw name="Open VS Code">
 <doc>Opens Visual Studio Code.</doc>
 <kw name="Start Process" library="Process">
 <arg>${VS_CODE_PATH}</arg>
 <doc>Starts a new process on background.</doc>
-<msg timestamp="20240731 13:44:27.469" level="INFO">Starting process:
+<msg timestamp="20240731 15:18:18.277" level="INFO">Starting process:
 "C:\Users\v-amarnathms\AppData\Local\Programs\Microsoft VS Code\Code.exe"</msg>
-<status status="PASS" starttime="20240731 13:44:27.469" endtime="20240731 13:44:27.490"/>
+<status status="PASS" starttime="20240731 15:18:18.277" endtime="20240731 15:18:18.302"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:44:37.497" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20240731 13:44:27.490" endtime="20240731 13:44:37.497"/>
+<msg timestamp="20240731 15:18:28.314" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240731 15:18:18.302" endtime="20240731 15:18:28.314"/>
 </kw>
-<status status="PASS" starttime="20240731 13:44:27.460" endtime="20240731 13:44:37.497"/>
+<status status="PASS" starttime="20240731 15:18:18.276" endtime="20240731 15:18:28.314"/>
 </kw>
 <kw name="Execute Azure Functions Command">
 <doc>Executes Azure Functions command.</doc>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>f1</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:37.501" level="INFO">Pressing keys: Key.f1</msg>
-<status status="PASS" starttime="20240731 13:44:37.497" endtime="20240731 13:44:37.501"/>
+<msg timestamp="20240731 15:18:28.315" level="INFO">Pressing keys: Key.f1</msg>
+<status status="PASS" starttime="20240731 15:18:28.315" endtime="20240731 15:18:28.319"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:44:39.516" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240731 13:44:37.503" endtime="20240731 13:44:39.516"/>
+<msg timestamp="20240731 15:18:30.323" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240731 15:18:28.319" endtime="20240731 15:18:30.323"/>
 </kw>
 <kw name="Type Text" library="RPA.Desktop">
 <arg>Azure Functions: Create New Project</arg>
 <doc>Type text one letter at a time.</doc>
-<status status="PASS" starttime="20240731 13:44:39.516" endtime="20240731 13:44:39.533"/>
+<status status="PASS" starttime="20240731 15:18:30.323" endtime="20240731 15:18:30.345"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:39.534" level="INFO">Pressing keys: Key.enter</msg>
-<status status="PASS" starttime="20240731 13:44:39.534" endtime="20240731 13:44:39.648"/>
+<msg timestamp="20240731 15:18:30.346" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 15:18:30.346" endtime="20240731 15:18:30.459"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:44:44.652" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240731 13:44:39.649" endtime="20240731 13:44:44.652"/>
+<msg timestamp="20240731 15:18:35.464" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240731 15:18:30.460" endtime="20240731 15:18:35.464"/>
 </kw>
-<status status="PASS" starttime="20240731 13:44:37.497" endtime="20240731 13:44:44.652"/>
+<status status="PASS" starttime="20240731 15:18:28.315" endtime="20240731 15:18:35.464"/>
 </kw>
-<doc>This test case opens Visual Studio Code, creates a new Azure Function project, and selects a folder.</doc>
-<status status="PASS" starttime="20240731 13:44:27.460" endtime="20240731 13:44:44.652"/>
-</test>
-<test id="s1-t2" name="Create Azure Function Project" line="19">
 <kw name="Wait For Dialog">
 <var>${dialog_visible}</var>
 <doc>Waits for a dialog to appear.</doc>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:44:49.666" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240731 13:44:44.657" endtime="20240731 13:44:49.666"/>
+<msg timestamp="20240731 15:18:40.473" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240731 15:18:35.464" endtime="20240731 15:18:40.473"/>
 </kw>
-<msg timestamp="20240731 13:44:49.666" level="INFO">${dialog_visible} = None</msg>
-<status status="PASS" starttime="20240731 13:44:44.657" endtime="20240731 13:44:49.666"/>
+<msg timestamp="20240731 15:18:40.473" level="INFO">${dialog_visible} = None</msg>
+<status status="PASS" starttime="20240731 15:18:35.464" endtime="20240731 15:18:40.473"/>
 </kw>
 <kw name="Select Folder for Project">
 <arg>${dialog_visible}</arg>
 <doc>Selects a folder for the newly created project.</doc>
 <kw name="Press Keys" library="RPA.Desktop">
-<arg>tab</arg>
+<arg>alt</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:49.666" level="INFO">Pressing keys: Key.tab</msg>
-<status status="PASS" starttime="20240731 13:44:49.666" endtime="20240731 13:44:49.669"/>
+<msg timestamp="20240731 15:18:40.473" level="INFO">Pressing keys: Key.alt</msg>
+<status status="PASS" starttime="20240731 15:18:40.473" endtime="20240731 15:18:40.473"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
-<arg>tab</arg>
+<arg>d</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:49.669" level="INFO">Pressing keys: Key.tab</msg>
-<status status="PASS" starttime="20240731 13:44:49.669" endtime="20240731 13:44:49.778"/>
-</kw>
-<kw name="Press Keys" library="RPA.Desktop">
-<arg>tab</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:49.780" level="INFO">Pressing keys: Key.tab</msg>
-<status status="PASS" starttime="20240731 13:44:49.779" endtime="20240731 13:44:49.883"/>
-</kw>
-<kw name="Press Keys" library="RPA.Desktop">
-<arg>tab</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:49.883" level="INFO">Pressing keys: Key.tab</msg>
-<status status="PASS" starttime="20240731 13:44:49.883" endtime="20240731 13:44:49.999"/>
-</kw>
-<kw name="Press Keys" library="RPA.Desktop">
-<arg>enter</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:49.999" level="INFO">Pressing keys: Key.enter</msg>
-<status status="PASS" starttime="20240731 13:44:49.999" endtime="20240731 13:44:50.104"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:44:52.108" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240731 13:44:50.104" endtime="20240731 13:44:52.108"/>
+<msg timestamp="20240731 15:18:40.473" level="INFO">Pressing keys: 'd'</msg>
+<status status="PASS" starttime="20240731 15:18:40.473" endtime="20240731 15:18:40.578"/>
 </kw>
 <kw name="Type Text" library="RPA.Desktop">
 <arg>${PROJECT_PATH}</arg>
 <doc>Type text one letter at a time.</doc>
-<status status="PASS" starttime="20240731 13:44:52.108" endtime="20240731 13:44:52.116"/>
+<status status="PASS" starttime="20240731 15:18:40.578" endtime="20240731 15:18:40.699"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:52.116" level="INFO">Pressing keys: Key.enter</msg>
-<status status="PASS" starttime="20240731 13:44:52.116" endtime="20240731 13:44:52.224"/>
-</kw>
-<kw name="Press Keys" library="RPA.Desktop">
-<arg>tab</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:52.224" level="INFO">Pressing keys: Key.tab</msg>
-<status status="PASS" starttime="20240731 13:44:52.224" endtime="20240731 13:44:52.326"/>
-</kw>
-<kw name="Press Keys" library="RPA.Desktop">
-<arg>tab</arg>
-<doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:52.329" level="INFO">Pressing keys: Key.tab</msg>
-<status status="PASS" starttime="20240731 13:44:52.329" endtime="20240731 13:44:52.429"/>
+<msg timestamp="20240731 15:18:40.699" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 15:18:40.699" endtime="20240731 15:18:40.808"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:52.429" level="INFO">Pressing keys: Key.enter</msg>
-<status status="PASS" starttime="20240731 13:44:52.429" endtime="20240731 13:44:52.531"/>
+<msg timestamp="20240731 15:18:40.808" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 15:18:40.808" endtime="20240731 15:18:40.908"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:44:57.541" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240731 13:44:52.531" endtime="20240731 13:44:57.541"/>
+<msg timestamp="20240731 15:18:45.909" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240731 15:18:40.908" endtime="20240731 15:18:45.909"/>
 </kw>
 <kw name="Type Text" library="RPA.Desktop">
 <arg>Typescript</arg>
 <doc>Type text one letter at a time.</doc>
-<status status="PASS" starttime="20240731 13:44:57.541" endtime="20240731 13:44:57.547"/>
+<status status="PASS" starttime="20240731 15:18:45.909" endtime="20240731 15:18:45.923"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:44:57.548" level="INFO">Pressing keys: Key.enter</msg>
-<status status="PASS" starttime="20240731 13:44:57.547" endtime="20240731 13:44:57.657"/>
+<msg timestamp="20240731 15:18:45.925" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 15:18:45.924" endtime="20240731 15:18:46.029"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:45:00.660" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20240731 13:44:57.657" endtime="20240731 13:45:00.660"/>
+<msg timestamp="20240731 15:18:49.041" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240731 15:18:46.029" endtime="20240731 15:18:49.041"/>
 </kw>
 <kw name="Type Text" library="RPA.Desktop">
 <arg>Model V4</arg>
 <doc>Type text one letter at a time.</doc>
-<status status="PASS" starttime="20240731 13:45:00.660" endtime="20240731 13:45:00.667"/>
+<status status="PASS" starttime="20240731 15:18:49.041" endtime="20240731 15:18:49.061"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:45:00.669" level="INFO">Pressing keys: Key.enter</msg>
-<status status="PASS" starttime="20240731 13:45:00.668" endtime="20240731 13:45:00.773"/>
+<msg timestamp="20240731 15:18:49.061" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 15:18:49.061" endtime="20240731 15:18:49.175"/>
 </kw>
 <kw name="Type Text" library="RPA.Desktop">
 <arg>Skip for now</arg>
 <doc>Type text one letter at a time.</doc>
-<status status="PASS" starttime="20240731 13:45:00.773" endtime="20240731 13:45:00.879"/>
+<status status="PASS" starttime="20240731 15:18:49.175" endtime="20240731 15:18:49.283"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:45:00.879" level="INFO">Pressing keys: Key.enter</msg>
-<status status="PASS" starttime="20240731 13:45:00.879" endtime="20240731 13:45:00.991"/>
+<msg timestamp="20240731 15:18:49.285" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 15:18:49.285" endtime="20240731 15:18:49.391"/>
 </kw>
 <kw name="Type Text" library="RPA.Desktop">
 <arg>Open in current window</arg>
 <doc>Type text one letter at a time.</doc>
-<status status="PASS" starttime="20240731 13:45:00.991" endtime="20240731 13:45:01.115"/>
+<status status="PASS" starttime="20240731 15:18:49.391" endtime="20240731 15:18:49.528"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>enter</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:45:01.116" level="INFO">Pressing keys: Key.enter</msg>
-<status status="PASS" starttime="20240731 13:45:01.115" endtime="20240731 13:45:01.224"/>
+<msg timestamp="20240731 15:18:49.530" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 15:18:49.529" endtime="20240731 15:18:49.641"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:45:03.229" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240731 13:45:01.224" endtime="20240731 13:45:03.229"/>
+<msg timestamp="20240731 15:18:51.656" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240731 15:18:49.641" endtime="20240731 15:18:51.657"/>
 </kw>
-<status status="PASS" starttime="20240731 13:44:49.666" endtime="20240731 13:45:03.229"/>
+<status status="PASS" starttime="20240731 15:18:40.473" endtime="20240731 15:18:51.657"/>
 </kw>
 <kw name="Close VS Code">
 <doc>Closes Visual Studio Code.</doc>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>alt</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:45:03.229" level="INFO">Pressing keys: Key.alt</msg>
-<status status="PASS" starttime="20240731 13:45:03.229" endtime="20240731 13:45:03.229"/>
+<msg timestamp="20240731 15:18:51.658" level="INFO">Pressing keys: Key.alt</msg>
+<status status="PASS" starttime="20240731 15:18:51.658" endtime="20240731 15:18:51.658"/>
 </kw>
 <kw name="Press Keys" library="RPA.Desktop">
 <arg>f4</arg>
 <doc>Press multiple keys down simultaneously.</doc>
-<msg timestamp="20240731 13:45:03.229" level="INFO">Pressing keys: Key.f4</msg>
-<status status="PASS" starttime="20240731 13:45:03.229" endtime="20240731 13:45:03.342"/>
+<msg timestamp="20240731 15:18:51.658" level="INFO">Pressing keys: Key.f4</msg>
+<status status="PASS" starttime="20240731 15:18:51.658" endtime="20240731 15:18:51.759"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240731 13:45:06.344" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20240731 13:45:03.342" endtime="20240731 13:45:06.344"/>
+<msg timestamp="20240731 15:18:54.772" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240731 15:18:51.759" endtime="20240731 15:18:54.772"/>
 </kw>
-<status status="PASS" starttime="20240731 13:45:03.229" endtime="20240731 13:45:06.344"/>
+<status status="PASS" starttime="20240731 15:18:51.658" endtime="20240731 15:18:54.772"/>
 </kw>
-<status status="PASS" starttime="20240731 13:44:44.656" endtime="20240731 13:45:06.344"/>
+<doc>This test case opens Visual Studio Code, creates a new Azure Function project, and selects a folder.</doc>
+<status status="PASS" starttime="20240731 15:18:18.276" endtime="20240731 15:18:54.774"/>
 </test>
-<status status="PASS" starttime="20240731 13:44:26.812" endtime="20240731 13:45:06.346"/>
+<status status="PASS" starttime="20240731 15:18:17.626" endtime="20240731 15:18:54.774"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="CreateNewProject">CreateNewProject</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="CreateNewProject">CreateNewProject</stat>
 </suite>
 </statistics>
 <errors>
