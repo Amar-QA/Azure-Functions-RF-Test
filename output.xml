@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240731 17:04:33.131" rpa="false" schemaversion="4">
+<suite id="s1" name="CreateNewProject" source="c:\Users\v-amarnathms\Desktop\Azure-Functions-RF-Test\CreateNewProject.robot">
+<test id="s1-t1" name="Create Basic Functions TypeScript v4 Project" line="15">
+<kw name="Open VS Code">
+<doc>Opens Visual Studio Code.</doc>
+<kw name="Start Process" library="Process">
+<arg>${VS_CODE_PATH}</arg>
+<doc>Starts a new process on background.</doc>
+<msg timestamp="20240731 17:04:33.976" level="INFO">Starting process:
+"C:\Users\v-amarnathms\AppData\Local\Programs\Microsoft VS Code\Code.exe"</msg>
+<status status="PASS" starttime="20240731 17:04:33.975" endtime="20240731 17:04:33.989"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240731 17:04:43.990" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240731 17:04:33.989" endtime="20240731 17:04:43.990"/>
+</kw>
+<status status="PASS" starttime="20240731 17:04:33.975" endtime="20240731 17:04:43.990"/>
+</kw>
+<kw name="Execute Azure Functions Command">
+<doc>Opens the command palette and initiates the Azure Functions creation process.</doc>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>f1</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240731 17:04:43.992" level="INFO">Pressing keys: Key.f1</msg>
+<status status="PASS" starttime="20240731 17:04:43.992" endtime="20240731 17:04:43.995"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240731 17:04:46.002" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240731 17:04:43.995" endtime="20240731 17:04:46.002"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>Azure Functions: Create New Project</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="PASS" starttime="20240731 17:04:46.002" endtime="20240731 17:04:46.020"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240731 17:04:46.020" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 17:04:46.020" endtime="20240731 17:04:46.127"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240731 17:04:49.137" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240731 17:04:46.127" endtime="20240731 17:04:49.137"/>
+</kw>
+<status status="PASS" starttime="20240731 17:04:43.992" endtime="20240731 17:04:49.138"/>
+</kw>
+<kw name="Wait For Dialog">
+<var>${dialog_visible}</var>
+<doc>Waits for the dialog to appear.</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240731 17:04:54.143" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240731 17:04:49.139" endtime="20240731 17:04:54.144"/>
+</kw>
+<msg timestamp="20240731 17:04:54.145" level="INFO">${dialog_visible} = None</msg>
+<status status="PASS" starttime="20240731 17:04:49.138" endtime="20240731 17:04:54.145"/>
+</kw>
+<kw name="Select Folder">
+<arg>${PROJECT_PATH_TS}</arg>
+<arg>TypeScript</arg>
+<doc>Selects a folder for the newly created project and configures project settings.</doc>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>alt+d</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240731 17:04:54.145" level="FAIL">ValueError: Invalid key: alt+d</msg>
+<status status="FAIL" starttime="20240731 17:04:54.145" endtime="20240731 17:04:54.182"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>${project_path}</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.182" endtime="20240731 17:04:54.183"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.183" endtime="20240731 17:04:54.183"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.183" endtime="20240731 17:04:54.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.183" endtime="20240731 17:04:54.183"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>${project_type}</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.183" endtime="20240731 17:04:54.183"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.183" endtime="20240731 17:04:54.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.183" endtime="20240731 17:04:54.183"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>Model V4</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.184" endtime="20240731 17:04:54.184"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.184" endtime="20240731 17:04:54.184"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>Skip for now</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.184" endtime="20240731 17:04:54.184"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.184" endtime="20240731 17:04:54.184"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>Open in current window</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.184" endtime="20240731 17:04:54.184"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.184" endtime="20240731 17:04:54.184"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.184" endtime="20240731 17:04:54.184"/>
+</kw>
+<status status="FAIL" starttime="20240731 17:04:54.145" endtime="20240731 17:04:54.184"/>
+</kw>
+<kw name="Close VS Code">
+<doc>Closes Visual Studio Code.</doc>
+<status status="NOT RUN" starttime="20240731 17:04:54.185" endtime="20240731 17:04:54.185"/>
+</kw>
+<doc>Opens VS Code, creates a TypeScript Azure Function project, and selects a folder.</doc>
+<status status="FAIL" starttime="20240731 17:04:33.974" endtime="20240731 17:04:54.186">ValueError: Invalid key: alt+d</status>
+</test>
+<test id="s1-t2" name="Create Basic Functions JavaScript v3 Project" line="23">
+<kw name="Open VS Code">
+<doc>Opens Visual Studio Code.</doc>
+<kw name="Start Process" library="Process">
+<arg>${VS_CODE_PATH}</arg>
+<doc>Starts a new process on background.</doc>
+<msg timestamp="20240731 17:04:54.191" level="INFO">Starting process:
+"C:\Users\v-amarnathms\AppData\Local\Programs\Microsoft VS Code\Code.exe"</msg>
+<status status="PASS" starttime="20240731 17:04:54.191" endtime="20240731 17:04:54.201"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240731 17:05:04.203" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240731 17:04:54.201" endtime="20240731 17:05:04.203"/>
+</kw>
+<status status="PASS" starttime="20240731 17:04:54.190" endtime="20240731 17:05:04.203"/>
+</kw>
+<kw name="Execute Azure Functions Command">
+<doc>Opens the command palette and initiates the Azure Functions creation process.</doc>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>f1</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240731 17:05:04.203" level="INFO">Pressing keys: Key.f1</msg>
+<status status="PASS" starttime="20240731 17:05:04.203" endtime="20240731 17:05:04.207"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240731 17:05:06.214" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240731 17:05:04.207" endtime="20240731 17:05:06.215"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>Azure Functions: Create New Project</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="PASS" starttime="20240731 17:05:06.215" endtime="20240731 17:05:06.230"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240731 17:05:06.231" level="INFO">Pressing keys: Key.enter</msg>
+<status status="PASS" starttime="20240731 17:05:06.230" endtime="20240731 17:05:06.333"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240731 17:05:09.347" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240731 17:05:06.333" endtime="20240731 17:05:09.347"/>
+</kw>
+<status status="PASS" starttime="20240731 17:05:04.203" endtime="20240731 17:05:09.348"/>
+</kw>
+<kw name="Wait For Dialog">
+<var>${dialog_visible}</var>
+<doc>Waits for the dialog to appear.</doc>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240731 17:05:14.351" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240731 17:05:09.349" endtime="20240731 17:05:14.351"/>
+</kw>
+<msg timestamp="20240731 17:05:14.352" level="INFO">${dialog_visible} = None</msg>
+<status status="PASS" starttime="20240731 17:05:09.348" endtime="20240731 17:05:14.352"/>
+</kw>
+<kw name="Select Folder">
+<arg>${PROJECT_PATH_JS}</arg>
+<arg>JavaScript</arg>
+<doc>Selects a folder for the newly created project and configures project settings.</doc>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>alt+d</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<msg timestamp="20240731 17:05:14.354" level="FAIL">ValueError: Invalid key: alt+d</msg>
+<status status="FAIL" starttime="20240731 17:05:14.353" endtime="20240731 17:05:14.356"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>${project_path}</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.356" endtime="20240731 17:05:14.356"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.356" endtime="20240731 17:05:14.356"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.356" endtime="20240731 17:05:14.356"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.356" endtime="20240731 17:05:14.357"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>${project_type}</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.357" endtime="20240731 17:05:14.357"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.357" endtime="20240731 17:05:14.357"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.357" endtime="20240731 17:05:14.357"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>Model V4</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.357" endtime="20240731 17:05:14.357"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.357" endtime="20240731 17:05:14.357"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>Skip for now</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.358" endtime="20240731 17:05:14.358"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.358" endtime="20240731 17:05:14.358"/>
+</kw>
+<kw name="Type Text" library="RPA.Desktop">
+<arg>Open in current window</arg>
+<doc>Type text one letter at a time.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.358" endtime="20240731 17:05:14.358"/>
+</kw>
+<kw name="Press Keys" library="RPA.Desktop">
+<arg>enter</arg>
+<doc>Press multiple keys down simultaneously.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.358" endtime="20240731 17:05:14.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.358" endtime="20240731 17:05:14.358"/>
+</kw>
+<status status="FAIL" starttime="20240731 17:05:14.353" endtime="20240731 17:05:14.358"/>
+</kw>
+<kw name="Close VS Code">
+<doc>Closes Visual Studio Code.</doc>
+<status status="NOT RUN" starttime="20240731 17:05:14.358" endtime="20240731 17:05:14.358"/>
+</kw>
+<doc>Opens VS Code, creates a JavaScript Azure Function project, and selects a folder.</doc>
+<status status="FAIL" starttime="20240731 17:04:54.189" endtime="20240731 17:05:14.358">ValueError: Invalid key: alt+d</status>
+</test>
+<status status="FAIL" starttime="20240731 17:04:33.137" endtime="20240731 17:05:14.358"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="CreateNewProject">CreateNewProject</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
