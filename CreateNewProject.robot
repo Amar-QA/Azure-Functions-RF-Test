@@ -1,30 +1,34 @@
 *** Settings ***
-Library    Process
-Library    RPA.Desktop
-Library    OperatingSystem
+Library     Process
+Library     RPA.Desktop
+Library     OperatingSystem
+
 
 *** Variables ***
-${VS_CODE_PATH}    C:\\Users\\v-amarnathms\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe
-${PROJECT_NAME}    MyAzureFunctionProject1
-${PROJECT_PATH}    C:\\Users\\v-amarnathms\\Documents\\${PROJECT_NAME}
+${VS_CODE_PATH}     C:\\Users\\v-amarnathms\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe
+${PROJECT_NAME}     MyAzureFunctionProject1
+${PROJECT_PATH}     C:\\Users\\v-amarnathms\\Documents\\${PROJECT_NAME}
+
 
 *** Test Cases ***
-Open VS Code and Create Azure Function Project
-    [Documentation]  This test case opens Visual Studio Code, creates a new Azure Function project, and selects a folder.
+Open VS Code
+    [Documentation]    This test case opens Visual Studio Code, creates a new Azure Function project, and selects a folder.
     Open VS Code
     Execute Azure Functions Command
-    ${dialog_visible}    Wait For Dialog 
-    Select Folder for Project  ${dialog_visible}
+
+Create Azure Function Project
+    ${dialog_visible}    Wait For Dialog
+    Select Folder for Project    ${dialog_visible}
     Close VS Code
 
 *** Keywords ***
 Open VS Code
-    [Documentation]  Opens Visual Studio Code.
+    [Documentation]    Opens Visual Studio Code.
     Start Process    ${VS_CODE_PATH}
     Sleep    10s    # Adjust as needed for VS Code to fully open
 
 Execute Azure Functions Command
-    [Documentation]  Executes Azure Functions command.
+    [Documentation]    Executes Azure Functions command.
     Press Keys    f1    # Presses the F1 key to open the command palette
     Sleep    2s    # Allow time for the command palette to open
     Type Text    Azure Functions: Create New Project    # Type the command without pressing Enter
@@ -32,13 +36,13 @@ Execute Azure Functions Command
     Sleep    5s    # Adjust as needed to allow the project creation dialog to appear
 
 Wait For Dialog
-    [Documentation]  Waits for a dialog to appear.
-     Sleep    5s    # Adjust as needed to wait for the dialog
+    [Documentation]    Waits for a dialog to appear.
+    Sleep    5s    # Adjust as needed to wait for the dialog
 
 Select Folder for Project
+    [Documentation]    Selects a folder for the newly created project.
     [Arguments]    ${dialog_visible}
-    [Documentation]  Selects a folder for the newly created project.
-   
+
     Press Keys    tab    # Navigate to the folder selection
     Press Keys    tab
     Press Keys    tab
@@ -63,7 +67,7 @@ Select Folder for Project
     Sleep    2s
 
 Close VS Code
-    [Documentation]  Closes Visual Studio Code.
+    [Documentation]    Closes Visual Studio Code.
     Press Keys    alt    # Presses the Alt key
     Press Keys    f4    # Presses the F4 key
     Sleep    3s    # Allow time for VS Code to close
