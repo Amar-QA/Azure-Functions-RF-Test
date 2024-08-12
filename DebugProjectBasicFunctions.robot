@@ -3,10 +3,11 @@ Library     Process
 Library     RPA.Desktop
 Library     OperatingSystem
 Library    AppiumLibrary
+Library    RPA.Windows
 
 *** Variables ***
 ${VS_CODE_PATH}         C:\\Users\\v-amarnathms\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe
-${PROJECT_PATH_TS}      C:\\Users\\v-amarnathms\\Documents\\AzureFunctionTest\\TsProject
+${PROJECT_PATH_TS}      C:\\Users\\v-amarnathms\\d
 
 *** Test Cases ***
 Opening Project File 
@@ -42,8 +43,7 @@ Debug Basic Functions
     [Documentation]    Starts the debugging process.
     Press Keys    f5    # Starts debugging
     Sleep    5s    # Allow time for debugging to start
-    Press Keys    enter 
-    Sleep    3s
+    RPA.Windows.Click    id:CommandButton_100
     Type Text    Azure Tools Manual Testing 1   
     Sleep    2s  
     Press Keys    enter
